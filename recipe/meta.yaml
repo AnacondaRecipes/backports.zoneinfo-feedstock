@@ -21,6 +21,7 @@ requirements:
   build:
     - {{ compiler('c') }}
     - patch # [unix]
+    - m2-patch # [win]
   host:
     - backports
     - python
