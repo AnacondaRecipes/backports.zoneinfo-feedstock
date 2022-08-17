@@ -43,6 +43,7 @@ about:
   license: Apache-2.0
   license_family: APACHE
   license_file: LICENSE
+  license_url: https://www.apache.org/licenses/LICENSE-2.0
   summary: 'Backport of the standard library zoneinfo module'
 
   description: |
