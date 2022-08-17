@@ -48,7 +48,7 @@ about:
 
   description: |
     Backport of the standard library zoneinfo module
-  doc_url: https://zoneinfo.readthedocs.io/en/latest/
+  doc_url: https://zoneinfo.readthedocs.io/
   dev_url: https://github.com/pganssle/zoneinfo
 
 extra:
