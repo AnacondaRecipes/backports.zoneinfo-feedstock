@@ -22,7 +22,7 @@ requirements:
     - {{ compiler('c') }}
     - m2-patch # [win]
     - patch # [not win]
-    - setuptools >= 40.0.0
+    - setuptools >=40.0.0
     - wheel
   host:
     - backports
