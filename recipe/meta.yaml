@@ -13,15 +13,17 @@ source:
     - tzdata-location.patch
 
 build:
-  number: 5
-  skip: true  # [py>39]
+  number: 0
+  skip: true  # [py>38]
   script: "{{ PYTHON }} -m pip install . -vv"
 
 requirements:
   build:
-    - python                                 # [build_platform != target_platform]
-    - cross-python_{{ target_platform }}     # [build_platform != target_platform]
     - {{ compiler('c') }}
+    - m2-patch # [win]
+    - patch # [not win]
+    - setuptools >=40.0.0
+    - wheel
   host:
     - backports
     - python
@@ -43,11 +45,12 @@ about:
   license: Apache-2.0
   license_family: APACHE
   license_file: LICENSE
+  license_url: https://www.apache.org/licenses/LICENSE-2.0
   summary: 'Backport of the standard library zoneinfo module'
 
   description: |
     Backport of the standard library zoneinfo module
-  doc_url: https://zoneinfo.readthedocs.io/en/latest/
+  doc_url: https://zoneinfo.readthedocs.io/
   dev_url: https://github.com/pganssle/zoneinfo
 
 extra:
